@@ -25,8 +25,13 @@ Each date of flight departure has different weather conditions that may affect a
 -	`FlightID`: The primary key that identifies each flight.
 -	`TailNumber`: A foreign key from the Planes table.
 -	`FlightDate`: The date of the flight.
--	`ScheduledDeparture`: A plane's scheduled departure from an airport in 24-hour format.
+-	`ScheduledDeparture`: A plane's scheduled departure time from an airport in 24-hour format.
 -	`Departure`: A plane's actual departure time from an airport in 24-hour format.
+- `ScheduledArrival`: A plane's scheduled arrival time from an airport in 24-hour format.
+-	`Arrival`: A plane's actual arrival time from an airport in 24-hour format.
+-	`Origin`: The airport a plane is flying from in this flight.
+-	`Destination`: The airport a plane is flying to in this flight.
+-	`CarrierName`: The name of the airline involved in this flight.
 
 # Retrieved data from
 - Flight Tracker. FlightAware, 2024. https://www.flightaware.com/live/airport/KEKO
