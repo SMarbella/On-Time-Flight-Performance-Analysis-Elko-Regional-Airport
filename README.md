@@ -33,6 +33,24 @@ Each date of flight departure has different weather conditions that may affect a
 -	`Destination`: The airport a plane is flying to in this flight.
 -	`CarrierName`: The name of the airline involved in this flight.
 
+## Airlines
+-	`AirlineID`: The primary key that identifies each airline.
+-	`CarrierName`: The full name of an airline company.
+
+## Weather
+-	`WeatherID`: The primary key that identifies each weather condition.
+-	`TemperatureID`: The average dry bulb temperature of a given day.
+-	`WindSpeed`: The average wind speed of a given day.
+-	`DewPoint`: The average dew point level of a given day.
+-	`Humidity`: The average humidity level of a given day.
+-	`Rainfall`: Inches of rainfall.
+-	`Snowfall`: Inches of Snowfall.
+
+# Junction Table
+## FlightsWeather
+- `FlightID`: The primary key from the Flights table and the foreign key of this table.
+- `WeatherID`: The primary key from the Weather table and the foreign key of this table.
+
 # Retrieved data from
 - Flight Tracker. FlightAware, 2024. https://www.flightaware.com/live/airport/KEKO
 - Local Climatological Data (LCD). National Centers for Environmental Information: National Oceanic and Atmospheric Administration, 2023. https://www.ncei.noaa.gov/access/search/data-search/local-climatological-data?startDate=2023-01-03T00:00:00&endDate=2023-01-03T23:59:59&bbox=40.889,-115.821,40.783,-115.715&pageNum=1
