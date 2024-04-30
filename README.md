@@ -12,7 +12,7 @@ Each date of flight departure has different weather conditions that may affect a
 
 # Table Columns
 ## Planes
--	`PlaneID`: The primary Key field that identifies each plane.
+-	`PlaneID`: The primary key that identifies each plane.
 - `TailNumber`: A unique string, mixed with letters and numbers, on the tail of each plane used to identify the plane. This identifier is 6 characters long.
 - `PlaneModel`: The aircraft model of the plane.
 
@@ -20,6 +20,13 @@ Each date of flight departure has different weather conditions that may affect a
 -	`AirportID`: The primary key and 3 character FAA code of an airport.
 - `AirportName`: The full name of an airport.
 - `Location`: The city and state where the airport is located.
+
+## Flights
+-	`FlightID`: The primary key that identifies each flight.
+-	`TailNumber`: A foreign key from the Planes table.
+-	`FlightDate`: The date of the flight.
+-	`ScheduledDeparture`: A plane's scheduled departure from an airport in 24-hour format.
+-	`Departure`: A plane's actual departure time from an airport in 24-hour format.
 
 # Retrieved data from
 - Flight Tracker. FlightAware, 2024. https://www.flightaware.com/live/airport/KEKO
