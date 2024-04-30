@@ -59,3 +59,13 @@ Each date of flight departure has different weather conditions that may affect a
 
 # Objectives
 The Elko Regional Airport wants to automate its data management system and determine whether or not different weather conditions affect on-time flight performance. The goals of the analysis is to develop a relational database model, generate tables based on the data about the weather and flights, and use the SQL language to query the data to answer questions.
+
+# Charts Generated For This Project
+The real world implications of this project is to track and trend the flight performance indicator of airplanes. All example flights are those that are originating from the Elko Regional Airport.
+
+There are five main entities needed to model the database: Planes, Flights, Airports, Weather, and Airlines. For each flight, there are details about each plane linked to a tailnumber and its make. The origins and destinations consist of airports where an airplane can travel. Each airport ID is based on the FAA code of the airport, its location, and the airport’s full name. All airplanes in the dataset belong to an airline carrier. The Airline entity could have more details about an airline.
+
+The reason why there is a many-to-many relationship between flights and weather is that a region can experience multiple weather conditions. Also, the weather conditions will differ from one airport to another, so a flight would go through different regions that have their own weather conditions. For example, in the originating airport, it could be a rainy day by the time an airplane departs, but in the destination airport, it could be a sunny day by the time the airplane arrives.
+
+## Conceptual Model
+
