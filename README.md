@@ -119,3 +119,6 @@ My subquery filters one airport from the list of airports and returns one row. T
 
 
 
+## SQL Results Using A Multiple-Row Subquery
+My subquery selects more than one airport from the list of airports and returns multiple rows. The row contains the Reno/Tahoe International Airport and the Battle Mountain Airport. My output shows all the flights traveling to either Reno/Tahoe International Airport or Battle Mountain Airport in my subquery.
+
