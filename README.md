@@ -68,4 +68,11 @@ There are five main entities needed to model the database: Planes, Flights, Airp
 The reason why there is a many-to-many relationship between flights and weather is that a region can experience multiple weather conditions. Also, the weather conditions will differ from one airport to another, so a flight would go through different regions that have their own weather conditions. For example, in the originating airport, it could be a rainy day by the time an airplane departs, but in the destination airport, it could be a sunny day by the time the airplane arrives.
 
 ## Conceptual Model
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Conceptual%20Model.png)
+
+## Logical Model
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Logical%20Model.png)
+
+## Physical Model
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Physical%20Model.png)
 
