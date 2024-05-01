@@ -103,9 +103,19 @@ The reason why there is a many-to-many relationship between flights and weather 
 
 # Data Exploration
 ## Joining The Junction Table Between Two Other Related Tables
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Joining%20The%20Junction%20Table%20Between%20Two%20Other%20Related%20Tables.png)
 
 ## Left Outer Join VS Inner Join
 My left table includes the list of airports. Not all of them have a single flight. My right table includes details about the planes that flew to other destinations. The difference is that null values are included because the result includes everything from the left table. The LEFT OUTER JOIN includes all the airports in the dataset, especially when there are no flights. The INNER JOIN includes all the rows and airports all my flights and airports share in common.
+
+### Left Outer Join
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Left%20Outer%20Join.png)
+
+### Inner Join
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Inner%20Join.png)
+
+## SQL Results Using A Single-Row Subquery
+My subquery filters one airport from the list of airports and returns one row. The row contains the Salt Lake City International Airport. The output shows all the flights that are traveling to Salt Lake City International Airport.
 
 
 
