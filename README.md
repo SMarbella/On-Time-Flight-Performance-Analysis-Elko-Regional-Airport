@@ -76,23 +76,36 @@ The reason why there is a many-to-many relationship between flights and weather 
 ## Physical Model
 ![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Physical%20Model.png)
 
-# Data Types
+# Examining The Tables
 ## Airlines
 ![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Column%20Data%20Types%20Airlines.png)
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Filled%20Data%20Airlines.png)
 
 ## Airports
 ![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Column%20Data%20Types%20Airports.png)
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Filled%20Data%20Airports.png)
 
 ## Flights
 ![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Column%20Data%20Types%20Flights.png)
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Filled%20Data%20Flights.png)
 
 ## FlightsWeather
 ![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Column%20Data%20Types%20FlightsWeather.png)
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Filled%20Data%20FlightsWeather.png)
 
 ## Planes
 ![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Column%20Data%20Types%20Planes.png)
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Filled%20Data%20Planes.png)
 
 ## Weather
 ![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Column%20Data%20Types%20Weather.png)
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Filled%20Data%20Weather.png)
 
-# Entered Data
+# Data Exploration
+## Joining The Junction Table Between Two Other Related Tables
+
+## Left Outer Join VS Inner Join
+My left table includes the list of airports. Not all of them have a single flight. My right table includes details about the planes that flew to other destinations. The difference is that null values are included because the result includes everything from the left table. The LEFT OUTER JOIN includes all the airports in the dataset, especially when there are no flights. The INNER JOIN includes all the rows and airports all my flights and airports share in common.
+
+
+
