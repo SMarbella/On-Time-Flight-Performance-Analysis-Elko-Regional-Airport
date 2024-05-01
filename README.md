@@ -60,6 +60,11 @@ Each date of flight departure has different weather conditions that may affect a
 # Objectives
 The Elko Regional Airport wants to automate its data management system and determine whether or not different weather conditions affect on-time flight performance. The goals of the analysis is to develop a relational database model, generate tables based on the data about the weather and flights, and use the SQL language to query the data to answer questions.
 
+# Step-By-Step Procedure Description
+After I developed my data model, I generated my tables using SQL in MySQL Workbench, exactly copying the visual structures in Lucidchart. Using the SQL programming langauge to fill my empty tables, I copied the information from the fictional flight and weather data from my Excel Spreadsheet to MySQL. In some tables, such as the airports table, I added extra airports to demonstrate how an OUTER LEFT JOIN is different from an INNER JOIN.
+
+I used a single-row subquery to show all the flights that are traveling to Salt Lake City International Airport. I used a multi-row subquery to show all the flights traveling to either Reno/Tahoe International Airport or Battle Mountain Airport in my subquery. For my aggregate function to group rows together, I used the COUNT function to count the number of flights and separates them by groups. I grouped the aggregates by their carriers and destinations. I used the NOT IN operator to return a list of flights that did not fly to either Salt Lake City International Airport or Reno/Tahoe International Airport. For the on-time flight performance, I created a column using the CASE statement that calculates whether a plane arrives early or late. I used the NOT EXISTS operator to return a list of flights that are behind both their departure and arrival schedules. I used the NOT NULL operator in a subquery to filter out rows that are NULL in either the Snowfall or Rainfall columns in the weather table.
+
 # Charts Generated For This Project
 The real world implications of this project is to track and trend the flight performance indicator of airplanes. All example flights are those that are originating from the Elko Regional Airport.
 
@@ -124,16 +129,23 @@ My subquery selects more than one airport from the list of airports and returns 
 
 ## SQL Results Using Aggregation By Using Multiple Columns
 My SQL query calculates the number of flights per airline to each destination. To aggregate or group the columns, it uses the COUNT function to count the number of flights and separates them by groups. I grouped the aggregates by their carriers and destinations.
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/SQL%20Results%20Using%20Aggregation%20By%20Using%20Multiple%20Columns.png)
 
 ## SQL Results Using The NOT IN Operator In The Subquery
 My query calculates the departure delay minutes and arrival delay minutes by subtracting the time differences between the scheduled departures and the actual departures and between the scheduled arrival and actual arrival. It creates two new columns with the calculated minutes. All positive numbers indicate an early departure and early arrival. All negative numbers indicate a late departure and late arrival. These numbers affect the flight performance indicator of an airline. My query selects all rows that are not in my subquery’s list. My subquery’s list consists of both Salt Lake City International Airport and Reno/Tahoe International Airport. The NOT IN operator indicates that the query should exclude everything inside the subquery’s list. It returns every flight except for the ones flying to the two airports.
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/SQL%20Results%20Using%20The%20NOT%20IN%20Operator%20In%20The%20Subquery.png)
 
 ## SQL Results Using a CASE Statement
 From the calculated time difference between the scheduled arrivals and departures and the actual arrivals and departures, my query calculates whether a plane arrives early or late. Each case statement makes a calculation depending on the time differences and whether or not a plane was able to meet its scheduled departure and arrival times. For those that departed early, the case statement indicates that it is early and vice versa. For those that arrived early, the case statement indicates that it is early and vice versa. One plane included in the recorded data departed early but arrived late. No matter the amount of rainfall and snowfall, planes can still either be ahead of their schedule or behind their schedule.
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/SQL%20Results%20Using%20a%20CASE%20Statement.png)
 
 ## SQL Results Using The NOT EXISTS Operator
 My query returns the list of flights that are behind both their departure and arrival schedules. The subquery returns a list of flights that are at least early in their departure, arrival, or both. The NOT EXISTS operator indicates that the query should return records that are not in the subquery’s list because they did not meet the criteria.
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/SQL%20Results%20Using%20The%20NOT%20EXISTS%20Operator.png)
 
 ## SQL Results Using The NOT NULL Operator And Filtering Out 0's In The Inner Query
 The results show that there were some days that experienced both rain and snow. If there are null records, it does not return these rows. My query selects the recorded weather conditions that are both snowy and rainy in Elko, Nevada in 2023. The first inner query selects the weather conditions that are rainy. The second inner query selects the weather conditions that are snowy. Combining both inner queries’ criteria gives multiple days that have snow and rain in Elko, Nevada.
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/SQL%20Results%20Using%20The%20NOT%20NULL%20Operator%20And%20Filtering%20Out%200's%20In%20The%20Inner%20Query.png)
 
+# Conclusion
+As a result, flight delays still occur no matter how clear the weather is or how much rain or snow covered the airports. On January 16, 2023, the weather conditions in Elko, Nevada had 0.08 inches of rainfall and 1 inch of snow. There was a plane on that day that had a delayed flight. However, on April 14, 2023, there was a plane on that day that had a delayed flight despite having no rain or snow in the area. No matter the amount of rainfall and snowfall, planes can still either be ahead of their schedule or behind their schedule.
