@@ -76,3 +76,23 @@ The reason why there is a many-to-many relationship between flights and weather 
 ## Physical Model
 ![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Physical%20Model.png)
 
+# Data Types
+## Airlines
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Column%20Data%20Types%20Airlines.png)
+
+## Airports
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Column%20Data%20Types%20Airports.png)
+
+## Flights
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Column%20Data%20Types%20Flights.png)
+
+## FlightsWeather
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Column%20Data%20Types%20FlightsWeather.png)
+
+## Planes
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Column%20Data%20Types%20Planes.png)
+
+## Weather
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Column%20Data%20Types%20Weather.png)
+
+# Entered Data
