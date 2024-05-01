@@ -145,6 +145,7 @@ My query returns the list of flights that are behind both their departure and ar
 
 ## SQL Results Using The NOT NULL Operator And Filtering Out 0's In The Inner Query
 The results show that there were some days that experienced both rain and snow. If there are null records, it does not return these rows. My query selects the recorded weather conditions that are both snowy and rainy in Elko, Nevada in 2023. The first inner query selects the weather conditions that are rainy. The second inner query selects the weather conditions that are snowy. Combining both inner queries’ criteria gives multiple days that have snow and rain in Elko, Nevada.
+
 ![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/SQL%20Results%20Using%20The%20NOT%20NULL%20Operator%20And%20Filtering%20Out%200's%20In%20The%20Inner%20Query.png)
 
 # Conclusion
