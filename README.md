@@ -108,6 +108,7 @@ The reason why there is a many-to-many relationship between flights and weather 
 
 # Data Exploration
 ## Joining The Junction Table Between Two Other Related Tables
+My junction table is FlightsWeather. The two related tables are the Flights table and the Weather table. Using INNER JOIN, I joined the three tables together through common primary keys: FlightID and WeatherID.
 ![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Joining%20The%20Junction%20Table%20Between%20Two%20Other%20Related%20Tables.png)
 
 ## Left Outer Join VS Inner Join
