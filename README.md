@@ -116,9 +116,24 @@ My left table includes the list of airports. Not all of them have a single fligh
 
 ## SQL Results Using A Single-Row Subquery
 My subquery filters one airport from the list of airports and returns one row. The row contains the Salt Lake City International Airport. The output shows all the flights that are traveling to Salt Lake City International Airport.
-
-
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Single-Row%20Subquery.png)
 
 ## SQL Results Using A Multiple-Row Subquery
 My subquery selects more than one airport from the list of airports and returns multiple rows. The row contains the Reno/Tahoe International Airport and the Battle Mountain Airport. My output shows all the flights traveling to either Reno/Tahoe International Airport or Battle Mountain Airport in my subquery.
+![Image](https://github.com/SMarbella/On-Time-Flight-Performance-Analysis-Elko-Regional-Airport/blob/main/Graphs/Multiple-Row%20Subquery.png)
+
+## SQL Results Using Aggregation By Using Multiple Columns
+My SQL query calculates the number of flights per airline to each destination. To aggregate or group the columns, it uses the COUNT function to count the number of flights and separates them by groups. I grouped the aggregates by their carriers and destinations.
+
+## SQL Results Using The NOT IN Operator In The Subquery
+My query calculates the departure delay minutes and arrival delay minutes by subtracting the time differences between the scheduled departures and the actual departures and between the scheduled arrival and actual arrival. It creates two new columns with the calculated minutes. All positive numbers indicate an early departure and early arrival. All negative numbers indicate a late departure and late arrival. These numbers affect the flight performance indicator of an airline. My query selects all rows that are not in my subquery’s list. My subquery’s list consists of both Salt Lake City International Airport and Reno/Tahoe International Airport. The NOT IN operator indicates that the query should exclude everything inside the subquery’s list. It returns every flight except for the ones flying to the two airports.
+
+## SQL Results Using a CASE Statement
+From the calculated time difference between the scheduled arrivals and departures and the actual arrivals and departures, my query calculates whether a plane arrives early or late. Each case statement makes a calculation depending on the time differences and whether or not a plane was able to meet its scheduled departure and arrival times. For those that departed early, the case statement indicates that it is early and vice versa. For those that arrived early, the case statement indicates that it is early and vice versa. One plane included in the recorded data departed early but arrived late. No matter the amount of rainfall and snowfall, planes can still either be ahead of their schedule or behind their schedule.
+
+## SQL Results Using The NOT EXISTS Operator
+My query returns the list of flights that are behind both their departure and arrival schedules. The subquery returns a list of flights that are at least early in their departure, arrival, or both. The NOT EXISTS operator indicates that the query should return records that are not in the subquery’s list because they did not meet the criteria.
+
+## SQL Results Using The NOT NULL Operator And Filtering Out 0's In The Inner Query
+The results show that there were some days that experienced both rain and snow. If there are null records, it does not return these rows. My query selects the recorded weather conditions that are both snowy and rainy in Elko, Nevada in 2023. The first inner query selects the weather conditions that are rainy. The second inner query selects the weather conditions that are snowy. Combining both inner queries’ criteria gives multiple days that have snow and rain in Elko, Nevada.
 
